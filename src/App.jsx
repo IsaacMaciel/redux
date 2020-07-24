@@ -1,27 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
-import Card from "./components/Card";
 import Intervalo from "./components/Intervalo";
+import Media from "./components/Media";
+import Soma from "./components/Soma";
+import Sorteio from "./components/Sorteio";
 
-export default (props) => (
-    <div className="App">
-        <h1>Exercício React-Redux (Simples)</h1>
-        <div className="linha">
-            <Intervalo></Intervalo>
+export default (props) => {
+    return (
+        <div className="App">
+            <h1>Exercício React-Redux (Simples)</h1>
+            <div className="linha">
+                <Intervalo></Intervalo>
+            </div>
+
+            <div className="linha">
+                <Media></Media>
+                <Soma></Soma>
+                <Sorteio></Sorteio>
+            </div>
         </div>
-
-        <div className="linha">
-            <Card title="Card 3" green>
-                W
-            </Card>
-            <Card title="Card 4 " purple>
-                Z
-            </Card>
-
-            <Card title="Card 2" blue>
-                Y
-            </Card>
-        </div>
-    </div>
-);
+    );
+};
